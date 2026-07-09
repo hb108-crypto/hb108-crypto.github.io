@@ -63,12 +63,10 @@ th {
 </section>
 
 <section id="objectives">
-<h2>Objectives</h2>
-<ul>
-<li>In this lab, you will assume the role of a Cloud Security Engineer for a fictional financial institution, SecureBank, that is deploying an internal AI assistant powered by Amazon Bedrock. The assistant enables financial analysts to query internal documents, customer transaction summaries, fraud reports, and company policies.
+<h2>Objective</h2>
+In this lab, you will assume the role of a Cloud Security Engineer for a fictional financial institution, SecureBank, that is deploying an internal AI assistant powered by Amazon Bedrock. The assistant enables financial analysts to query internal documents, customer transaction summaries, fraud reports, and company policies.
 
-Your responsibility is to secure the AI assistant by implementing proper access controls, protecting confidential information, monitoring AI activity, and enabling governance through logging and auditing.</li>
-</ul>
+Your responsibility is to secure the AI assistant by implementing proper access controls, protecting confidential information, monitoring AI activity, and enabling governance through logging and auditing.
 </section>
 
 <section id="part1">
