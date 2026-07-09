@@ -53,20 +53,21 @@ th {
 <body>
 
 <header>
-<h1>Secure AI Assistant for Financial Services</h1>
+<h1>Secure AI Assistant for Financial Services Lab</h1>
 <p><strong>Services:</strong> Amazon Bedrock, Amazon S3, IAM, CloudTrail, CloudWatch</p>
 </header>
 
 <section id="overview">
-<h2>Lab Overview</h2>
-<p>...</p>
+<h2>Overview</h2>
+<p>Financial institutions are increasingly adopting generative AI to improve employee productivity, automate document analysis, and assist with fraud investigations. However, these AI systems introduce new security risks, including unauthorized access to sensitive financial information, prompt injection attacks, accidental data leakage, and insufficient auditing.</p>
 </section>
 
 <section id="objectives">
 <h2>Objectives</h2>
 <ul>
-<li>Deploy a secure AI assistant using Amazon Bedrock.</li>
-...
+<li>In this lab, you will assume the role of a Cloud Security Engineer for a fictional financial institution, SecureBank, that is deploying an internal AI assistant powered by Amazon Bedrock. The assistant enables financial analysts to query internal documents, customer transaction summaries, fraud reports, and company policies.
+
+Your responsibility is to secure the AI assistant by implementing proper access controls, protecting confidential information, monitoring AI activity, and enabling governance through logging and auditing.</li>
 </ul>
 </section>
 
