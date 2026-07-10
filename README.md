@@ -82,7 +82,7 @@ Your responsibility is to secure the AI assistant by implementing proper access 
 <li>Create the bucket.</li>
 </ol>
 <h3>Step 2</h3>
-<a href="downloads/SecureBank-Datasets.zip" download>
+<a href="downloads/Secure-Bank-Datasets.zip" download>
     📥 Download Lab Dataset
 </a> 
 
