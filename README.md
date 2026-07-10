@@ -76,7 +76,15 @@ Your responsibility is to secure the AI assistant by implementing proper access 
 <ol>
 <li>Open the AWS Console.</li>
 <li>Navigate to Amazon S3.</li>
-<li>Create a bucket named <code>securebank-ai-data</code>.</li>
+<li>Create a bucket named <code>bank-ai-assistant-lab</code>.</li>
+<li>Leave Block Public Access enabled.</li>
+<li>Enable Bucket Versioning.</li>
+<li>Create the bucket.</li>
+</ol>
+<h3>Step 2</h3>
+
+<ol>
+    <li>Create folders</li>
 </ol>
 </section>
 
