@@ -68,17 +68,123 @@
                 <h2>Core Services</h2>
 
                 <p>
-                    Explain how the system works.
+                    <ol>
+                        <li>AgentCore Harness</li>
+                        <p>Every AI agent needs a harness—the system that allows it to run. The harness is responsible for calling the language model, deciding when to use tools, keeping track of context, handling errors, and managing the resources the agent depends on. It also provides the infrastructure needed to run an agent, including compute, memory, storage, identity, networking, and monitoring.
+
+                        Building a simple agent on your local machine is relatively easy. Running that same agent in production is much more difficult. As more users begin using the agent, developers must manage concurrent requests, isolate user sessions, handle authentication, store state, and scale the application. Traditionally, all of this infrastructure had to be built and maintained by the development team.</p>
+                        <img src="downloads/harness-architecture.png"
+                         alt="Harness architecture diagram">
+                        <p>To Create a Harness:
+                            <h3>Step 1: Access the AgentCore Console</h3>
+
+    <p>
+        Navigate to the <strong>Amazon Bedrock AgentCore Console</strong>.
+    </p>
+
+    <h3>Step 2: Create a Harness</h3>
+
+    <ol>
+        <li>Click <strong>Create Harness</strong>.</li>
+        <li>Select <strong>Quick Create</strong> for the fastest setup.</li>
+        
+        <li>Enter a name for your harness.</li>
+        <li>
+            After creation, your agent becomes available in the
+            <strong>Harness Playground</strong>.
+        </li>
+    </ol>
+
+    <h3>Step 3: Configure the Harness</h3>
+
+    <p>
+        In the <strong>Harness Playground</strong>, use the configuration panel to
+        customize your agent.
+    </p>
+
+    <ul>
+        <li>Foundation model (Amazon Bedrock, OpenAI, or Google Gemini)</li>
+        <li>System prompt</li>
+        <li>Tools</li>
+        <li>Skills</li>
+        <li>Model parameters (maximum tokens, temperature, and top P)</li>
+        <li>Invocation limits</li>
+    </ul>
+
+    <h3>Step 4: Test and Iterate</h3>
+
+    <p>
+        Test your harness directly in the playground. Make changes to the
+        configuration as needed until the agent behaves as expected.
+    </p>    
+                        
+                        </p>
+                        <li>AgentCore Runtime</li>
+                        <p>AgentCore Runtime provides a managed agent harness that handles this infrastructure automatically. Developers define their agent by specifying its model, tools, and instructions, while AgentCore Runtime manages the environment needed to run it securely and reliably. This makes it easier to update an agent by changing its configuration instead of rebuilding the supporting infrastructure.</p>
+                        <p>
+        After creating a harness, you can retrieve its runtime information and
+        begin interacting with it through the AWS Console or the AWS CLI.
+    </p>
+
+    <h3>Step 1: Locate Your Harness Runtime Information</h3>
+
+    <h4>Using the AWS Console</h4>
+
+    <ol>
+        <li>Open the <strong>Amazon Bedrock AgentCore Console</strong>.</li>
+        <li>Select <strong>Harnesses</strong>.</li>
+        <li>Choose your harness.</li>
+        <li>
+            On the details page, locate the following information:
+            <ul>
+                <li><strong>Harness ARN</strong></li>
+                <li><strong>Runtime ARN</strong> (created automatically)</li>
+                <li><strong>Runtime ID</strong></li>
+                <li><strong>Status</strong> (should display <em>Ready</em>)</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h4>Using the AWS CLI</h4>
+
+    <p>Run the following command:</p>
+
+    <pre><code>aws bedrock-agentcore-control get-harness \
+    --harness-id "your-harness-id"</code></pre>
+
+    <p>
+        You can run this command from <strong>AWS CloudShell</strong> or any
+        environment where the AWS CLI is configured.
+    </p>
+
+    <h3>Step 2: Invoke Your Harness</h3>
+
+    <h4>Method: Using the Harness Playground</h4>
+
+    <ol>
+        <li>Open your harness details page.</li>
+        <li>Click <strong>Test in Playground</strong>.</li>
+        <li>Begin interacting with your agent.</li>
+    </ol>
+
+    <h3>Step 3: Generate Invocation Code</h3>
+
+    <ol>
+        <li>Open your harness details page.</li>
+        <li>Click <strong>View invocation code</strong>.</li>
+        <li>Select your preferred language:
+            <ul>
+                <li>Python</li>
+                <li>TypeScript</li>
+                <li>JavaScript</li>
+            </ul>
+        </li>
+        <li>Copy the generated code, which includes your harness ARN.</li>
+    </ol>
+                    </ol>
                 </p>
 
-                <figure>
-                    <img src="assets/images/architecture.svg"
-                         alt="Architecture Diagram">
-                    <figcaption>
-                        High-level system architecture.
-                    </figcaption>
-                </figure>
-
+                   
             </section>
 
             <section id="examples">
