@@ -26,9 +26,7 @@
 
                 <ul>
                     <li><a href="#overview">Overview</a></li>
-                    <li><a href="#key-characteristics">Key Characteristics</a></li>
                     <li><a href="#core-services">Core Services</a></li>
-                    <li><a href="#examples">Examples</a></li>
                     <li><a href="#reference">Reference</a></li>
                 </ul>
 
@@ -48,28 +46,13 @@
                 
             </section>
 
-            <section id="key-characteristics">
-                <h2>Key Characteristics</h2>
-
-                <h3>Prerequisites</h3>
-
-                <ul>
-                    <li>Requirement One</li>
-                    <li>Requirement Two</li>
-                    <li>Requirement Three</li>
-                </ul>
-
-                <h3>Installation</h3>
-
-                <pre><code>Example command goes here</code></pre>
-            </section>
 
             <section id="core-services">
                 <h2>Core Services</h2>
 
                 <p>
                     <ol>
-                        <li>AgentCore Harness</li>
+                        <strong>><li>AgentCore Harness</li></strong>
                         <p>Every AI agent needs a harness—the system that allows it to run. The harness is responsible for calling the language model, deciding when to use tools, keeping track of context, handling errors, and managing the resources the agent depends on. It also provides the infrastructure needed to run an agent, including compute, memory, storage, identity, networking, and monitoring.
 
                         Building a simple agent on your local machine is relatively easy. Running that same agent in production is much more difficult. As more users begin using the agent, developers must manage concurrent requests, isolate user sessions, handle authentication, store state, and scale the application. Traditionally, all of this infrastructure had to be built and maintained by the development team.</p>
@@ -119,7 +102,7 @@
     </p>    
                         
                         </p>
-                        <li>AgentCore Runtime</li>
+                        <strong><li>AgentCore Runtime</li></strong>
                         <p>AgentCore Runtime provides a managed agent harness that handles this infrastructure automatically. Developers define their agent by specifying its model, tools, and instructions, while AgentCore Runtime manages the environment needed to run it securely and reliably. This makes it easier to update an agent by changing its configuration instead of rebuilding the supporting infrastructure.</p>
                         <p>
         After creating a harness, you can retrieve its runtime information and
@@ -181,37 +164,112 @@
         </li>
         <li>Copy the generated code, which includes your harness ARN.</li>
     </ol>
+                        <strong><li>AgentCore Gateway</li></strong>
+                            <p>
+                                Amazon Bedrock AgentCore Gateway helps AI agents securely communicate with external tools and services. Instead of connecting to each tool individually, agents use the Gateway as a single access point. The Gateway manages these connections using the Model Context Protocol (MCP), making it easier to discover and use available tools.
+                                gentCore Gateway can connect directly to Knowledge Bases, making it easier for AI agents to retrieve information from your data. This built-in integration is especially useful for RAG applications, where an agent combines information from a knowledge base with a foundation model to generate more accurate and relevant responses.
+                            </p>
+                        <strong><li>AgentCore Memory</li></strong>
+                            <p>
+                                AgentCore Memory is a managed service that allows AI
+                                agents to remember information from conversations. It helps agents provide
+                                more personalized and context aware responses by storing information during
+                                and across sessions.
+                            </p>
+                                <h3>Memory Types</h3>
+
+    <ul>
+        <li>
+            <strong>Short-Term Memory</strong> – Stores information for the
+            current conversation, allowing the agent to maintain context.
+        </li>
+        <li>
+            <strong>Long-Term Memory</strong> – Remembers important information,
+            such as user preferences and previous interactions, across multiple
+            conversations.
+        </li>
+    </ul>
+
+    <h3>Memory Strategies</h3>
+
+    <ul>
+        <li><strong>Semantic</strong> – Stores important facts.</li>
+        <li><strong>Summarization</strong> – Saves conversation summaries.</li>
+        <li><strong>User Preference</strong> – Remembers user settings and preferences.</li>
+        <li><strong>Episodic</strong> – Learns from previous interactions.</li>
+        <li><strong>Custom</strong> – Allows developers to define custom memory behavior.</li>
+    </ul>
+
+    <h3>Key Features</h3>
+
+    <ul>
+        <li>Automatic memory management</li>
+        <li>Configurable memory strategies</li>
+        <li>Per-user memory isolation</li>
+        <li>Built-in encryption and IAM-based access control</li>
+    </ul>
+                        <strong><li>AgentCore Policy</li></strong>
+                            <p>
+                                AgentCore Policy helps control what AI agents are allowed
+                                to do. It checks each tool request before it runs and enforces rules to
+                                ensure agents only perform approved actions.
+                            </p>
+                        <h3>Policy Types</h3>
+
+    <ul>
+        <li><strong>Identity-based</strong> – Control access based on users or roles.</li>
+        <li><strong>Resource-based</strong> – Restrict access to specific data or resources.</li>
+        <li><strong>Time-based</strong> – Allow actions only during certain times.</li>
+        <li><strong>Risk-based</strong> – Block actions that exceed defined limits.</li>
+        <li><strong>Conditional</strong> – Apply rules based on context, such as location or request details.</li>
+    </ul>
+
+    <h3>Key Features</h3>
+
+    <ul>
+        <li>Controls access to tools, data, and actions</li>
+        <li>Uses the <strong>Cedar</strong> policy language</li>
+        <li>Integrates with <strong>AgentCore Gateway</strong></li>
+        <li>Supports audit logging and policy versioning</li>
+        <li>Helps enforce security and compliance requirements</li>
+    </ul>
+                        <strong><li>AgentCore Identity</li></strong>
+                            <p>
+                                AgentCore Identity is a managed service that allows AI
+                                agents to securely access AWS services and third-party applications. It
+                                manages authentication and credentials so agents can connect to external
+                                services without storing sensitive information in code.
+                            </p>
+                                <h3>Supported Authentication</h3>
+
+    <ul>
+        <li><strong>OAuth 2.0</strong> – Connect to services like Google and Salesforce.</li>
+        <li><strong>AWS IAM</strong> – Secure access to AWS resources.</li>
+        <li><strong>OIDC &amp; SAML</strong> – Integrate with enterprise identity providers.</li>
+        <li><strong>API Keys</strong> – Support authentication for custom services.</li>
+    </ul>
+
+    <h3>Key Features</h3>
+
+    <ul>
+        <li>Secure storage for credentials and tokens</li>
+        <li>Automatic token validation and refresh</li>
+        <li>Identity-aware access control</li>
+        <li>Built-in encryption and IAM integration</li>
+        <li>Audit logging and credential management</li>
+    </ul>
                     </ol>
                 </p>
 
                    
-            </section>
-
-            <section id="examples">
-                <h2>Examples</h2>
-
-                <pre><code>// Example code block</code></pre>
-
-            </section>
+            </section>/
 
             <section id="reference">
                 <h2>Reference</h2>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Property</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>Example</td>
-                            <td>Description goes here.</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <p>
+                    For a more comprehensive guide, visit <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html">the AWS official documentation site.</a>
+                </p>
 
             </section>
 
