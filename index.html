@@ -49,11 +49,10 @@
 
             <section id="core-services">
                 <h2>Core Services</h2>
-
                 <p>
                     <ol>
                         <strong>><li>AgentCore Harness</li></strong>
-                        <p>Every AI agent needs a harness—the system that allows it to run. The harness is responsible for calling the language model, deciding when to use tools, keeping track of context, handling errors, and managing the resources the agent depends on. It also provides the infrastructure needed to run an agent, including compute, memory, storage, identity, networking, and monitoring.
+                        <p>Every AI agent needs a harness, as it is the system that allows it to run. The harness is responsible for calling the language model, deciding when to use tools, keeping track of context, handling errors, and managing the resources the agent depends on. It also provides the infrastructure needed to run an agent, including compute, memory, storage, identity, networking, and monitoring.
 
                         Building a simple agent on your local machine is relatively easy. Running that same agent in production is much more difficult. As more users begin using the agent, developers must manage concurrent requests, isolate user sessions, handle authentication, store state, and scale the application. Traditionally, all of this infrastructure had to be built and maintained by the development team.</p>
                         <img src="downloads/harness-architecture.png"
@@ -70,6 +69,7 @@
     <ol>
         <li>Click <strong>Create Harness</strong>.</li>
         <li>Select <strong>Quick Create</strong> for the fastest setup.</li>
+        <img src="downloads/harness-beginning-page.png" alt="quick create harness page">
         
         <li>Enter a name for your harness.</li>
         <li>
@@ -99,7 +99,9 @@
     <p>
         Test your harness directly in the playground. Make changes to the
         configuration as needed until the agent behaves as expected.
-    </p>    
+    </p>
+                            <img src="downloads/harness-test-page.png" alt="harness test page">
+
                         
                         </p>
                         <strong><li>AgentCore Runtime</li></strong>
@@ -124,6 +126,7 @@
                 <li><strong>Runtime ARN</strong> (created automatically)</li>
                 <li><strong>Runtime ID</strong></li>
                 <li><strong>Status</strong> (should display <em>Ready</em>)</li>
+                <img src="downloads/runtime-page.png" alt="runtime ready page">
             </ul>
         </li>
     </ol>
@@ -163,6 +166,8 @@
             </ul>
         </li>
         <li>Copy the generated code, which includes your harness ARN.</li>
+        <img src="downloads/invocation-code.png" alt="copied invocation code">
+
     </ol>
                         <strong><li>AgentCore Gateway</li></strong>
                             <p>
@@ -262,7 +267,7 @@
                 </p>
 
                    
-            </section>/
+            </section>
 
             <section id="reference">
                 <h2>Reference</h2>
